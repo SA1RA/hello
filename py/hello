@@ -1,25 +1,30 @@
 #!/usr/bin/env python3
 
-"""Hello world! program."""
 import skilstak.colors as c
 
-def print_plain(who="Good Sir."):
-    """Simply prints hello <who> to the screen
-    
-    Args:
-        who (str): Who are we saying hello to
-    
-    """
-    print("Hello " + who)
-def print_color(who="Good Sir."):
-    print(c.rc() + "Hello " + who)
+def print_plain(name="Sam"):
+    print("Hello " + name)
+
+def print_sir(name="Sir"):
+    print("Hello " + name)
+
 if __name__ == '__main__':
-    import sys
-    who = "Good Sir."
-    if len(sys.argv) > 1:
-        who = sys.argv[1] 
-    print_plain(who)
-    print_color(who)
-try:
-    if option == "-c":
-        print_color(who)
+    from sys import argv
+    
+    name = "Sir"
+    option = ""
+
+    if len(argv) == 1:
+        print_plain(name)
+
+    # hello -c
+    # hello You
+
+    if len(argv) == 2:
+        if argv[1].startswith("-"):
+            option = argv[1]
+        else:
+            name = argv[1]
+
+    # hello -c You
+    #???
