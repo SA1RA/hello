@@ -12,19 +12,21 @@ if __name__ == '__main__':
     from sys import argv
     
     name = "Sir"
-    option = ""
+    option = " "
 
+    #default
     if len(argv) == 1:
         print_plain(name)
-
-    # hello -c
-    # hello You
 
     if len(argv) == 2:
         if argv[1].startswith("-"):
             option = argv[1]
         else:
             name = argv[1]
-
+    
+    if len(argv) == 2:
+        if argv[2].startswith("saml")
+            option = argv[1]
+            name = argv[2]
     # hello -c You
     #???
