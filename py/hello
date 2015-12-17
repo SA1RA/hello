@@ -24,6 +24,12 @@ if __name__ == '__main__':
 
     if option == "-c":
         f.print_color(name)
+
+    elif option == "-h":
+        f.print_hello(name)
        
     elif option == "-m":
         f.print_multi(name)
+
+    elif option == "-r":
+        f.print_random(name)
