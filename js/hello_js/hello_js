@@ -12,7 +12,7 @@ var  printRed = function (message) {
 
 var printMulti = function (message) {
   while (true) {
-    console.log(c.clear + c.multi("hello ") + c.cyan + message + c.reset)
+    console.log(c.clear + c.multi("hello ") + c.cyan + ("S") + c.m + ("a") + c.blue + ("m") + c.reset)
   }  
 }
 
